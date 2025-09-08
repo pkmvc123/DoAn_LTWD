@@ -1,0 +1,10 @@
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\bin\Debug\DoAn_LTW.exe.config
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\bin\Debug\DoAn_LTW.exe
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\bin\Debug\DoAn_LTW.pdb
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.csproj.AssemblyReference.cache
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.Form1.resources
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.Properties.Resources.resources
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.csproj.GenerateResource.cache
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.csproj.CoreCompileInputs.cache
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.exe
+E:\CODE\MyProject\DoAn_LTWD\SourceApp\DoAn_LTW\DoAn_LTW\obj\Debug\DoAn_LTW.pdb
