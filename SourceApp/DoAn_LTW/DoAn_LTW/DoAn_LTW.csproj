@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ListControl\DanhSachOder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListControl\DanhSachOder.Designer.cs">
+      <DependentUpon>DanhSachOder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListControl\DangThucHien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListControl\DangThucHien.Designer.cs">
+      <DependentUpon>DangThucHien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListControl\Kho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListControl\Kho.Designer.cs">
+      <DependentUpon>Kho.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListControl\QuanLy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListControl\QuanLy.Designer.cs">
+      <DependentUpon>QuanLy.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,5 +103,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
