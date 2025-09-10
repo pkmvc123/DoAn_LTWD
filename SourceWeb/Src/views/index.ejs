@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do An LT Windown</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--! Loading -->
+    <div class="page-loader" id="pageLoader">
+      <div class="loader-circle"></div>
+      <div class="loader-text"></div>
+    </div>
+
+    <!--! Menu -->
+    <input class="menu-checkbox" id="menu" type="checkbox" name="menu" />
+    <nav class="menu">
+      <label class="menu-dots" for="menu">
+        <span class="menu-dot"></span>
+        <span class="menu-dot"></span>
+        <span class="menu-dot"></span>
+      </label>
+      <ul class="menu-items">
+        <li class="menu-item">
+          <a href="/"><i class="bxr bx-garage"> </i></a>
+        </li>
+        <li class="menu-item">
+          <i class="bxr bx-contact-book"></i>
+        </li>
+        <li class="menu-item">
+          <i class="bxr bx-credit-card-alt"></i>
+        </li>
+        <li class="menu-item">
+          <i class="bxr bx-chef-hat"></i>
+        </li>
+        <li class="menu-item">
+          <i class="bxr bx-trophy-star"></i>
+        </li>
+        <li class="menu-item">
+          <a id="modalBuyed">
+            <i class="bx bx-basket"></i>
+          </a>
+        </li>
+      </ul>
+      <label for="menu" class="menu-closer-overlay"> </label>
+    </nav>
+
+    <!--! Content Page -->
+    <div class="menu-food" id="menuFood">
+      <h2>Menu Food</h2>
+      <div class="menu-list" id="listFood"></div>
+    </div>
+
+    <!--! Modal Buyed -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-buyed" id="modalBuyedBox">
+      <h3>Danh sách đã mua</h3>
+      <ul id="buyedList"></ul>
+      <div class="modal-total">Thành tiền: 0 VND</div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>

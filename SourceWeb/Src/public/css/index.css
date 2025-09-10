@@ -1,0 +1,382 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.menu-food {
+  display: inline-block;
+  max-width: 80%;
+  margin: 5rem auto 100px;
+  padding: 40px;
+  background: #ffffff10;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-food h2 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.food-card {
+  flex: 1 1 400px;
+  max-width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.food-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/*! -------------------------- Customs Ribbon -------------------------- */
+.food-ribbon {
+  position: absolute;
+  top: 15px;
+  left: -35px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 6px 40px;
+  text-align: center;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.ribbon-new {
+  color: #ff6200;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+}
+
+.ribbon-best {
+  color: #ffffff;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+}
+
+.ribbon-sale {
+  color: #ff2626;
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+.ribbon-limited {
+  color: #ffe6ff;
+  background: linear-gradient(135deg, #7f00ff, #e100ff);
+}
+
+.ribbon-outofstock {
+  color: #f2f2f2;
+  background: linear-gradient(135deg, #999999, #666666);
+}
+
+.food-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.food-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin: 10px 0 5px;
+}
+
+.food-price {
+  font-size: 18px;
+  font-weight: 500;
+  color: #d64123;
+  margin-bottom: 15px;
+}
+
+.food-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.food-actions input {
+  width: 60px;
+  padding: 6px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.food-actions button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #ff7b54, #ffb26b);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.food-actions button:hover {
+  background: linear-gradient(135deg, #ff6333, #ff9a3c);
+}
+
+/*! -------------------------- Modal Buyed -------------------------- */
+#buyedList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.modal-buyed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  width: 500px;
+  max-width: 90%;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  z-index: 1001;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-buyed.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-buyed h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.modal-buyed ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.modal-buyed li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.modal-total {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 900;
+  text-align: right;
+  color: #d64123;
+}
+
+.modal-actions {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.modal-actions button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #36d1dc, #5b86e5);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.modal-actions button:hover {
+  background: linear-gradient(135deg, #2c9cd6, #4866e0);
+}
+
+.buy-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ccc;
+  font-size: 15px;
+}
+
+.buy-name {
+  flex: 1;
+  font-weight: 500;
+}
+
+.buy-qty {
+  width: 80px;
+  text-align: center;
+}
+
+.buy-line-price {
+  width: 120px;
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+}
+
+.buy-remove {
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.buy-remove:hover {
+  background: #d9363e;
+}
+
+.checkout-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.checkout-left {
+  max-width: 55%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-left label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-left input,
+.checkout-left textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 4px;
+}
+
+.checkout-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 15px;
+}
+
+.checkout-total {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+}
+
+.checkout-total {
+  text-align: right;
+}
+
+.checkout-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.checkout-amount {
+  font-size: 20px;
+  font-weight: bold;
+  color: #d9363e;
+}
+
+/*! -------------------------- Notification Toast -------------------------- */
+#toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateX(120%);
+  transition: all 0.3s ease;
+  min-width: 220px;
+}
+
+#toast.success {
+  background: #4caf50;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#toast.error {
+  background: #e74141;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#toast-progress {
+  height: 4px;
+  background: rgba(255, 255, 255, 0.8);
+  margin-top: 6px;
+  border-radius: 2px;
+  width: 100%;
+}
