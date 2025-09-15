@@ -1,4 +1,5 @@
 const connect = require("../configs/connectDB");
+const { broadcastOrder } = require("../middlewares/wsServer");
 
 //! Method GET
 const indexPage = (req, res) => {
@@ -74,6 +75,17 @@ const postListFood = async (req, res) => {
     await connection.query(queryDetail, [valuesDetail]);
 
     await connection.commit();
+
+    broadcastOrder({
+      orderId,
+      customer_name,
+      customer_phone,
+      note,
+      total_price,
+      cart,
+      status: 0,
+      created_at: new Date().toISOString(),
+    });
 
     res.status(201).json({
       message: "Tạo đơn hàng thành công",
